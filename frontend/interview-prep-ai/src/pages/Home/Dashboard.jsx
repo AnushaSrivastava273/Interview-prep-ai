@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import toast from "react-hot-toast";
 import { LuPlus } from "react-icons/lu";
 import { useNavigate } from 'react-router-dom';
-import SummaryCard from '../../components/cards/SummaryCard'; // Ensure SummaryCard is imported
+import SummaryCard from '../../components/cards/SummaryCard.jsx'; // Ensure SummaryCard is imported
 import DeleteAlertContent from '../../components/DeleteAlertContent';
 import DashboardLayout from '../../components/layouts/DashboardLayout';
 import Modal from '../../components/Modal';
