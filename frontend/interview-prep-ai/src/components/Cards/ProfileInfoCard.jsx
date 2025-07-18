@@ -32,12 +32,12 @@ const ProfileInfoCard = () => {
     className="w-11 h-11 bg-gray-300 rounded-full mr-3 object-cover"
   />
 ) : (
-  <div className="w-11 h-11 bg-gray-200 rounded-full mr-3 flex items-center justify-center text-gray-700 font-semibold text-sm">
+  <div className="w-11 h-11 bg-gray-200 rounded-full mr-3 flex items-center justify-center text-gray-700 font-semibold text-sm capitalize">
     {getInitials(user.name)}
   </div>
 )}
       <div>
-        <div className="text-[15px] text-black font-bold leading-3">
+        <div className="text-[15px] text-black font-bold leading-3 capitalize">
           {user.name || ''}
         </div>
         <button

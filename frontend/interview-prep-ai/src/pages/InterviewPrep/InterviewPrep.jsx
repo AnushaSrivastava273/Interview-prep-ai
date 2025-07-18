@@ -52,10 +52,10 @@ const InterviewPrep = () => {
       if (response.data) {
         setExplanation(response.data);
       } else {
-        setErrorMsg("Failed to generate explanation, try again later.");
+        setErrorMsg("System blinked 😅 Happens sometimes — try clicking again once or twice, it usually works!");
       }
     } catch (error) {
-      setErrorMsg("Failed to generate explanation, try again later.");
+      setErrorMsg("System blinked 😅 Happens sometimes — try clicking again once or twice, it usually works!");
       console.error("Error:", error);
     } finally {
       setIsLoading(false);

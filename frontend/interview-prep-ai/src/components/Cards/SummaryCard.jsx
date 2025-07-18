@@ -52,7 +52,7 @@ const SummaryCard = ({
             onDelete();
           }}
         >
-          delete
+          Delete
         </button>
       </div>
 

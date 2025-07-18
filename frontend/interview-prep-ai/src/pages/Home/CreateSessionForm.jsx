@@ -111,7 +111,7 @@ const CreateSessionForm = () => {
       } else if (error.message) {
         setError(error.message);
       } else {
-        setError("Something went wrong. Please try again.");
+        setError("Hmm... looks like the system blinked 😅. Try again — it usually works in a click or two.");
       }
     } finally {
       setIsLoading(false);

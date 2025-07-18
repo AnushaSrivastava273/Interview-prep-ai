@@ -1,14 +1,14 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import HERO_IMG from "../assets/hero-img.png";
-import { APP_FEATURES } from "../utils/data";
 import { LuSparkles } from "react-icons/lu";
-import Login from './Auth/Login';
-import SignUp from './Auth/SignUp';
+import HERO_IMG from "../assets/hero-img.png";
+import ProfileInfoCard from '../components/Cards/ProfileInfoCard'; // Add this line if you're using this component
 import Modal from "../components/Modal";
 import { UserContext } from '../context/userContext';
-import ProfileInfoCard from '../components/Cards/ProfileInfoCard'; // Add this line if you're using this component
+import { APP_FEATURES } from "../utils/data";
+import Login from './Auth/Login';
+import SignUp from './Auth/SignUp';
 
 const Landingpage = () => {
   const { user } = useContext(UserContext);
@@ -32,9 +32,9 @@ const Landingpage = () => {
         <div className="w-[500px] h-[500px] bg-amber-200/20 blur-[65px] absolute top-0 left-0 z-0" />
 
         {/* Main Container */}
-        <div className="container mx-auto px-4 md:px-12 lg:px-20 pt-6 pb-[200px] relative z-10">
+        <div className="container mx-auto px-4 md:px-12 lg:px-20 pt-6 pb-0 relative z-10">
          <header className="flex justify-between items-center mb-16">
-         <div className="text-[26px] font-bold bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
+         <div className="text-[26px] font-bold text-transparent bg-clip-text bg-[radial-gradient(circle,#FF9324_0%,#FCD760_100%)] bg-[length:200%_200%] animate-text-shine">
   Interview Prep AI
 </div>
           {/* Header */}
@@ -99,18 +99,16 @@ const Landingpage = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Image Section */}
-      <div className="w-full min-h-full relative z-10">
-      <section className="flex items-center justify-center -mt-66">
+        {/* Hero Image - moved inside main container, below hero section */}
+        <div className="flex items-center justify-center w-full mt-8 md:mt-20 mb-0">
           <img
             src={HERO_IMG}
             alt="Hero"
-            className="w-[80vw] rounded-e-lg"
+            className="w-full md:w-[80vw] h-auto rounded-e-lg block mb-0 max-w-[600px] md:max-w-[1000px]"
+            style={{ marginBottom: 0, display: 'block' }}
           />
-        </section>
+        </div>
+      </div>
 
         {/* Features Section */}
         <div className="w-full min-h-full bg-[#FFFCEF] mt-10">
